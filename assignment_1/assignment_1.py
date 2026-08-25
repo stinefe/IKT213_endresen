@@ -1,5 +1,4 @@
 import cv2
-import numpy
 
 def print_image_information(image):
     """prints the information about the image"""
@@ -12,7 +11,7 @@ def print_image_information(image):
 
 def save_camera_information():
     """saves the camera information into a .txt file"""
-    camera = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+    camera = cv2.VideoCapture(0)
     fps = camera.get(cv2.CAP_PROP_FPS)
     width = camera.get(cv2.CAP_PROP_FRAME_WIDTH)
     height = camera.get(cv2.CAP_PROP_FRAME_HEIGHT)
